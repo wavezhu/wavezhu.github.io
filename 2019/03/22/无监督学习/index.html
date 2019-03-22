@@ -27,7 +27,7 @@
 <meta property="og:image" content="http://polq2xceb.bkt.clouddn.com/%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/output_15_2.png">
 <meta property="og:image" content="http://polq2xceb.bkt.clouddn.com/%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/output_15_3.png">
 <meta property="og:image" content="http://polq2xceb.bkt.clouddn.com/%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/output_17_0.png">
-<meta property="og:updated_time" content="2019-03-22T08:19:45.200Z">
+<meta property="og:updated_time" content="2019-03-22T09:52:12.911Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="无监督学习">
 <meta name="twitter:description" content="1 概述利用无标签的数据学习数据的分布或数据与数据之间的关系被称作无监督学习。• 有监督学习和无监督学习的最大区别在于数据是否有标签• 无监督学习最常应用的场景是聚类 (clustering) 和降维 (Dimension Reduction)    2 样本相似性度量评估两个不同样本之间的“相似性”，通常使用的方法就是计算两个样本之间的“距离”。使用不同的方法计算样本间距离会关系到聚类结果的好坏">
@@ -72,7 +72,7 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags">标签</a></li>
+				<li><a href="/tags/">标签</a></li>
 	        
 				<li><a href="/resume">简历</a></li>
 	        
@@ -152,7 +152,7 @@
 				
 					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags">标签</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/">标签</a></li>
 		        
 					<li style="width: 33.333333333333336%"><a href="/resume">简历</a></li>
 		        
@@ -191,138 +191,11 @@
       
         <h2 id="1-概述"><a href="#1-概述" class="headerlink" title="1 概述"></a>1 概述</h2><p>利用<strong>无标签的数据</strong>学习<strong>数据的分布</strong>或<strong>数据与数据之间的关系</strong>被称作无监督学习。<br>• 有监督学习和无监督学习的最大区别在于数据是否有标签<br>• 无监督学习最常应用的场景是聚类 (clustering) 和降维 (Dimension Reduction)   </p>
 <h2 id="2-样本相似性度量"><a href="#2-样本相似性度量" class="headerlink" title="2 样本相似性度量"></a>2 样本相似性度量</h2><p>评估两个不同样本之间的“相似性”，通常使用的方法就是计算两个样本之间的“距离”。使用不同的方法计算样本间距离会关系到聚类结果的好坏 。<br><a id="more"></a></p>
-<h3 id="2-1-欧式距离"><a href="#2-1-欧式距离" class="headerlink" title="2.1 欧式距离"></a>2.1 欧式距离</h3><p>欧氏距离是最常用的一种度量方法，源于欧式空间中两点的距离。欧氏距离将样品的不同属性（即各指标或各变量）之间的差别等同看待，这一点有时不能满足实际要求。例如，在教育研究中，经常遇到对人的分析和判别，个体的不同属性对于区分个体有着不同的重要性。因此，有时需要采用不同的距离函数。其计算方法如下：<br>$$d=\sqrt{\sum_{k=1}^{n}(x_{1k}-x_{2k})^{2}}$$<br><img src="http://polq2xceb.bkt.clouddn.com/%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/%E4%BA%8C%E7%BB%B4%E7%A9%BA%E9%97%B4%E4%B8%AD%E6%AC%A7%E5%BC%8F%E8%B7%9D%E7%A6%BB%E7%9A%84%E8%AE%A1%E7%AE%97.jpg" alt></p>
-<center>二维空间中欧氏距离的计算</center>
+<h3 id="2-1-欧式距离"><a href="#2-1-欧式距离" class="headerlink" title="2.1 欧式距离"></a>2.1 欧式距离</h3><p>欧氏距离是最常用的一种度量方法，源于欧式空间中两点的距离。欧氏距离将样品的不同属性（即各指标或各变量）之间的差别等同看待，这一点有时不能满足实际要求。例如，在教育研究中，经常遇到对人的分析和判别，个体的不同属性对于区分个体有着不同的重要性。因此，有时需要采用不同的距离函数。其计算方法如下：<br>$$d=\sqrt{\sum_{k=1}^{n}(x_{1k}-x_{2k})^{2}}$$</p>
+<div align="center"><img src="http://polq2xceb.bkt.clouddn.com/%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/%E4%BA%8C%E7%BB%B4%E7%A9%BA%E9%97%B4%E4%B8%AD%E6%AC%A7%E5%BC%8F%E8%B7%9D%E7%A6%BB%E7%9A%84%E8%AE%A1%E7%AE%97.jpg" width="250" hegiht="150" align="middle"></div><br><center>二维空间中欧氏距离的计算</center><br><br>### 2.2曼哈顿距离<br>曼哈顿距离也称作“城市街区距离”，类似于在城市之中驾车行驶，从一个十字路口到另一个十字路口的距离。其计算方法如下：<br>$$d=\sum_{k=1}^{n}\left | x_{1k}-x_{2k} \right |$$<br><div align="center"><img src="http://polq2xceb.bkt.clouddn.com/%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/%E4%BA%8C%E7%BB%B4%E7%A9%BA%E9%97%B4%E4%B8%AD%E6%9B%BC%E5%93%88%E9%A1%BF%E8%B7%9D%E7%A6%BB%E7%9A%84%E8%AE%A1%E7%AE%97.jpg" width="250" hegiht="150" align="center"></div><br><center>二维空间中曼哈顿距离的计算</center><br><br>### 2.3 马氏距离<br>马氏距离(Mahalanobis distance)是由印度统计学家马哈拉诺比斯(P. C. Mahalanobis)提出的，表示数据的协方差距离。它是一种有效的计算两个未知样本集的相似度的方法。与欧氏距离不同的是它考虑到各种特性之间的联系（例如：一条关于身高的信息会带来一条关于体重的信息，因为两者是有关联的）并且是尺度无关的(scale-invariant)，即独立于测量尺度。其计算方式如下，s是协方差矩阵：<br>$$d(x_{i},x_{j})=\sqrt{(x_{i}-x_{j})^{T}s^{-1}(x_{i}-x_{j})}$$<br><div align="center"><img src="http://polq2xceb.bkt.clouddn.com/%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/%E4%BA%8C%E7%BB%B4%E7%A9%BA%E9%97%B4%E4%B8%AD%E7%9A%84%E9%A9%AC%E6%B0%8F%E8%B7%9D%E7%A6%BB.png" width="250" hegiht="150" align="center"></div><br><center>二维空间中的马氏距离</center><br>优点：它不受量纲的影响，两点之间的马氏距离与原始数据的测量单位无关；由标准化数据和中心化数据(即原始数据与均值之差）计算出的二点之间的马氏距离相同。马氏距离还可以排除变量之间的相关性的干扰。缺点：它的缺点是夸大了变化微小的变量的作用。<br><br>### 2.4 夹角余弦<br>余弦相似度用向量空间中两个向量夹角的余弦值作为衡量两个样本差异的大小。余弦值越接近1，说明两个向量夹角越接近0度，表明两个向量越相似。其计算方法如下<br>$$cos(\theta )=\frac{\sum_{n}^{k=1}x_{1k}x_{2k}}{\sqrt{\sum_{n}^{k=1}x_{1k}^{2}}\sqrt{\sum_{n}^{k=1}x_{2k}^{2}}}$$<br>$$d(x_{i},x_{j})=\sqrt{(x_{i}-x_{j})^{T}s^{-1}(x_{i}-x_{j})}$$<br><div align="center"><img src="http://polq2xceb.bkt.clouddn.com/%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/%E4%BA%8C%E7%BB%B4%E7%A9%BA%E9%97%B4%E4%B8%AD%E7%9A%84%E5%A4%B9%E8%A7%92%E4%BD%99%E5%BC%A6.png" width="250" hegiht="150" align="center"></div><br><center>二维空间中的夹角余弦</center><br>最常见的应用就是计算文本相似度。将两个文本根据他们词，建立两个向量，计算这两个向量的余弦值，就可以知道两个文本在统计学方法中他们的相似度情况。<br><br>## 3 聚类<br>聚类(clustering)，就是根据数据的“相似性”将数据分为多类的过程。 scikit-learn库（以后简称sklearn库）提供的常用聚类算法函数包含在sklearn.cluster这个模块中，如：K-Means，近邻传播算法，DBSCAN等。<br>以同样的数据集应用于不同的算法，可能会得到不同的结果，算法所耗费的时间也不尽相同，这是由算法的特性决定的。<br>sklearn.cluster模块提供的各聚类算法函数可以使用不同的数据形式作为输入:<br><em> 标准数据输入格式:[样本个数，特征个数]定义的矩阵形式。
+</em> 相似性矩阵输入格式：即由[样本数目，样本数目]定义的矩阵形式，矩阵中的每一个元素为两个样本的相似度，如DBSCAN， AffinityPropagation(近邻传播算法)接受这种输入。如果以余弦相似度为例，则对角线元素全为1. 矩阵中每个元素的取值范围为[0,1]。<br><br>|方法名称| 参数| 可扩展性| 用例| 几何（使用度量）|<br>| — | — | — | — | — |<br>| <a href="http://scikit-learn.org/stable/modules/clustering.html#k-means" target="_blank" rel="noopener">K-Means</a> | 群集数 | 非常大n_samples，中型n_clusters有 <a href="http://scikit-learn.org/stable/modules/clustering.html#mini-batch-kmeans" target="_blank" rel="noopener"><span>MiniBatch代码</span></a> | 通用，甚至集群大小，平面几何，集群不太多 | 点之间的距离 |<br>| <a href="http://scikit-learn.org/stable/modules/clustering.html#affinity-propagation" target="_blank" rel="noopener">Affinity propagation</a> | 阻尼，样品偏好 | 不可扩展的n_samples | 许多簇，群集大小不均匀，非平面几何 | 图距离（例如最近邻图） |<br>| <a href="http://scikit-learn.org/stable/modules/clustering.html#mean-shift" target="_blank" rel="noopener">Mean-shift</a> | 带宽 | 不可扩展n_samples | 许多簇，群集大小不均匀，非平面几何 | 点之间的距离 |<br>| <a href="http://scikit-learn.org/stable/modules/clustering.html#spectral-clustering" target="_blank" rel="noopener">Spectral clustering</a> | 群集数 | 中等n_samples，小n_clusters| 几个簇，甚至簇大小，非平面几何 | 图距离（例如最近邻图） |<br>| <a href="http://scikit-learn.org/stable/modules/clustering.html#hierarchical-clustering" target="_blank" rel="noopener">Ward hierarchical clustering</a> | 群集数 | 大n_samples和n_clusters | 许多集群，可能连接限制 | 点之间的距离 |<br>| <a href="http://scikit-learn.org/stable/modules/clustering.html#hierarchical-clustering" target="_blank" rel="noopener">Agglomerative clustering</a> | 簇数，链接类型，距离 | 大n_samples和n_clusters | 许多集群，可能是连接约束，非欧几里德距离 | 任何成对距离 |<br>| <a href="http://scikit-learn.org/stable/modules/clustering.html#dbscan" target="_blank" rel="noopener">DBSCAN</a> | 社区大小 | 非常大n_samples，中等n_clusters | 非平面几何，不均匀的簇大小 | 最近点之间的距离 |<br>| <a href="http://scikit-learn.org/stable/modules/mixture.html#mixture" target="_blank" rel="noopener">Gaussian mixtures</a> | 许多 | 不可扩展 | 平面几何，适合密度估算 | 马哈拉诺比斯距离中心 |<br>| <a href="http://scikit-learn.org/stable/modules/clustering.html#birch" target="_blank" rel="noopener">Birch</a> | 分支因子，阈值，可选全局集群。 | 大n_clusters和n_samples | 大数据集，异常值去除，数据简化。 | 欧几里得距离之间的距离 |<br><br>## 4 降维<br>降维，就是在保证数据所具有的代表性特性或者分布的情况下，将高维数据转化为低维数据的过程。又称分解成分中的信号（矩阵分解问题）。<br>聚类和降维都是无监督学习的典型任务，任务之间存在关联，比如某些高维数据的聚类可以通过降维处理更好的获得，另外学界研究也表明代表性的聚类算法如k-means与降维算法如NMF之间存在等价性。<br>降维是机器学习领域的一个重要研究内容，有很多被工业界和学术界接受的典型算法，截止到目前sklearn库提供7种降维算法。<br>降维过程也可以被理解为对数据集的组成成份进行分解（decomposition）的过程，因此sklearn为降维模块命名为decomposition, 在对降维算法调用需要使用sklearn.decomposition模块。<br><br>算法名称| 参数 | 可扩展性 | 适用任务<br>—|—|—|—<br>PCA | 所降维度及其他超参 | 大规模数据 | 信号处理等<br>FastICA | 所降维度及其他超参 | 超大规模数据 | 图形图像特征提取<br>NMF | 所降维度及其他超参 | 大规模数据 | 图形图像特征提取<br>LDA| 所降维度及其他超参 | 大规模数据 | 文本挖掘，主题挖掘<br><br>## 5 K-means聚类算法<br>### 5.1 算法思想<br>k-means聚类算法以k为参数，把n个对象分成k个簇，使簇内具有较高的相似度，而簇间的相似较低。<a href="https://www.naftaliharris.com/blog/visualizing-k-means-clustering/" target="_blank" rel="noopener">K-means聚类算法动画演示</a><br><div align="center"><img src="http://polq2xceb.bkt.clouddn.com/%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/K-means_convergence.gif" width="300" hegiht="200" align="center"></div>
 
-<h3 id="2-2曼哈顿距离"><a href="#2-2曼哈顿距离" class="headerlink" title="2.2曼哈顿距离"></a>2.2曼哈顿距离</h3><p>曼哈顿距离也称作“城市街区距离”，类似于在城市之中驾车行驶，从一个十字路口到另一个十字路口的距离。其计算方法如下：<br>$$d=\sum_{k=1}^{n}\left | x_{1k}-x_{2k} \right |$$<br><img src="http://polq2xceb.bkt.clouddn.com/%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/%E4%BA%8C%E7%BB%B4%E7%A9%BA%E9%97%B4%E4%B8%AD%E6%9B%BC%E5%93%88%E9%A1%BF%E8%B7%9D%E7%A6%BB%E7%9A%84%E8%AE%A1%E7%AE%97.jpg" alt></p>
-<center>二维空间中曼哈顿距离的计算</center>    
 
-<h3 id="2-3-马氏距离"><a href="#2-3-马氏距离" class="headerlink" title="2.3 马氏距离"></a>2.3 马氏距离</h3><p>马氏距离(Mahalanobis distance)是由印度统计学家马哈拉诺比斯(P. C. Mahalanobis)提出的，表示数据的协方差距离。它是一种有效的计算两个未知样本集的相似度的方法。与欧氏距离不同的是它考虑到各种特性之间的联系（例如：一条关于身高的信息会带来一条关于体重的信息，因为两者是有关联的）并且是尺度无关的(scale-invariant)，即独立于测量尺度。其计算方式如下，s是协方差矩阵：<br>$$d(x_{i},x_{j})=\sqrt{(x_{i}-x_{j})^{T}s^{-1}(x_{i}-x_{j})}$$</p>
-<p><img src="http://polq2xceb.bkt.clouddn.com/%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/%E4%BA%8C%E7%BB%B4%E7%A9%BA%E9%97%B4%E4%B8%AD%E7%9A%84%E9%A9%AC%E6%B0%8F%E8%B7%9D%E7%A6%BB.png" alt></p>
-<p><center>二维空间中的马氏距离</center><br>优点：它不受量纲的影响，两点之间的马氏距离与原始数据的测量单位无关；由标准化数据和中心化数据(即原始数据与均值之差）计算出的二点之间的马氏距离相同。马氏距离还可以排除变量之间的相关性的干扰。缺点：它的缺点是夸大了变化微小的变量的作用。     </p>
-<h3 id="2-4-夹角余弦"><a href="#2-4-夹角余弦" class="headerlink" title="2.4 夹角余弦"></a>2.4 夹角余弦</h3><p>余弦相似度用向量空间中两个向量夹角的余弦值作为衡量两个样本差异的大小。余弦值越接近1，说明两个向量夹角越接近0度，表明两个向量越相似。其计算方法如下<br>$$cos(\theta )=\frac{\sum_{n}^{k=1}x_{1k}x_{2k}}{\sqrt{\sum_{n}^{k=1}x_{1k}^{2}}\sqrt{\sum_{n}^{k=1}x_{2k}^{2}}}$$<br>$$d(x_{i},x_{j})=\sqrt{(x_{i}-x_{j})^{T}s^{-1}(x_{i}-x_{j})}$$</p>
-<p><img src="http://polq2xceb.bkt.clouddn.com/%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/%E4%BA%8C%E7%BB%B4%E7%A9%BA%E9%97%B4%E4%B8%AD%E7%9A%84%E5%A4%B9%E8%A7%92%E4%BD%99%E5%BC%A6.png" alt></p>
-<p><center>二维空间中的夹角余弦</center><br>最常见的应用就是计算文本相似度。将两个文本根据他们词，建立两个向量，计算这两个向量的余弦值，就可以知道两个文本在统计学方法中他们的相似度情况。</p>
-<h2 id="3-聚类"><a href="#3-聚类" class="headerlink" title="3 聚类"></a>3 聚类</h2><p>聚类(clustering)，就是根据数据的“相似性”将数据分为多类的过程。 scikit-learn库（以后简称sklearn库）提供的常用聚类算法函数包含在sklearn.cluster这个模块中，如：K-Means，近邻传播算法，DBSCAN等。<br>以同样的数据集应用于不同的算法，可能会得到不同的结果，算法所耗费的时间也不尽相同，这是由算法的特性决定的。<br>sklearn.cluster模块提供的各聚类算法函数可以使用不同的数据形式作为输入:   </p>
-<ul>
-<li>标准数据输入格式:[样本个数，特征个数]定义的矩阵形式。</li>
-<li>相似性矩阵输入格式：即由[样本数目，样本数目]定义的矩阵形式，矩阵中的每一个元素为两个样本的相似度，如DBSCAN， AffinityPropagation(近邻传播算法)接受这种输入。如果以余弦相似度为例，则对角线元素全为1. 矩阵中每个元素的取值范围为[0,1]。  </li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>方法名称</th>
-<th>参数</th>
-<th>可扩展性</th>
-<th>用例</th>
-<th>几何（使用度量）</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="http://scikit-learn.org/stable/modules/clustering.html#k-means" target="_blank" rel="noopener">K-Means</a></td>
-<td>群集数</td>
-<td>非常大n_samples，中型n_clusters有 <a href="http://scikit-learn.org/stable/modules/clustering.html#mini-batch-kmeans" target="_blank" rel="noopener"><span>MiniBatch代码</span></a></td>
-<td>通用，甚至集群大小，平面几何，集群不太多</td>
-<td>点之间的距离</td>
-</tr>
-<tr>
-<td><a href="http://scikit-learn.org/stable/modules/clustering.html#affinity-propagation" target="_blank" rel="noopener">Affinity propagation</a></td>
-<td>阻尼，样品偏好</td>
-<td>不可扩展的n_samples</td>
-<td>许多簇，群集大小不均匀，非平面几何</td>
-<td>图距离（例如最近邻图）</td>
-</tr>
-<tr>
-<td><a href="http://scikit-learn.org/stable/modules/clustering.html#mean-shift" target="_blank" rel="noopener">Mean-shift</a></td>
-<td>带宽</td>
-<td>不可扩展n_samples</td>
-<td>许多簇，群集大小不均匀，非平面几何</td>
-<td>点之间的距离</td>
-</tr>
-<tr>
-<td><a href="http://scikit-learn.org/stable/modules/clustering.html#spectral-clustering" target="_blank" rel="noopener">Spectral clustering</a></td>
-<td>群集数</td>
-<td>中等n_samples，小n_clusters</td>
-<td>几个簇，甚至簇大小，非平面几何</td>
-<td>图距离（例如最近邻图）</td>
-</tr>
-<tr>
-<td><a href="http://scikit-learn.org/stable/modules/clustering.html#hierarchical-clustering" target="_blank" rel="noopener">Ward hierarchical clustering</a></td>
-<td>群集数</td>
-<td>大n_samples和n_clusters</td>
-<td>许多集群，可能连接限制</td>
-<td>点之间的距离</td>
-</tr>
-<tr>
-<td><a href="http://scikit-learn.org/stable/modules/clustering.html#hierarchical-clustering" target="_blank" rel="noopener">Agglomerative clustering</a></td>
-<td>簇数，链接类型，距离</td>
-<td>大n_samples和n_clusters</td>
-<td>许多集群，可能是连接约束，非欧几里德距离</td>
-<td>任何成对距离</td>
-</tr>
-<tr>
-<td><a href="http://scikit-learn.org/stable/modules/clustering.html#dbscan" target="_blank" rel="noopener">DBSCAN</a></td>
-<td>社区大小</td>
-<td>非常大n_samples，中等n_clusters</td>
-<td>非平面几何，不均匀的簇大小</td>
-<td>最近点之间的距离</td>
-</tr>
-<tr>
-<td><a href="http://scikit-learn.org/stable/modules/mixture.html#mixture" target="_blank" rel="noopener">Gaussian mixtures</a></td>
-<td>许多</td>
-<td>不可扩展</td>
-<td>平面几何，适合密度估算</td>
-<td>马哈拉诺比斯距离中心</td>
-</tr>
-<tr>
-<td><a href="http://scikit-learn.org/stable/modules/clustering.html#birch" target="_blank" rel="noopener">Birch</a></td>
-<td>分支因子，阈值，可选全局集群。</td>
-<td>大n_clusters和n_samples</td>
-<td>大数据集，异常值去除，数据简化。</td>
-<td>欧几里得距离之间的距离</td>
-</tr>
-</tbody>
-</table>
-<h2 id="4-降维"><a href="#4-降维" class="headerlink" title="4 降维"></a>4 降维</h2><p>降维，就是在保证数据所具有的代表性特性或者分布的情况下，将高维数据转化为低维数据的过程。又称分解成分中的信号（矩阵分解问题）。<br>聚类和降维都是无监督学习的典型任务，任务之间存在关联，比如某些高维数据的聚类可以通过降维处理更好的获得，另外学界研究也表明代表性的聚类算法如k-means与降维算法如NMF之间存在等价性。<br>降维是机器学习领域的一个重要研究内容，有很多被工业界和学术界接受的典型算法，截止到目前sklearn库提供7种降维算法。<br>降维过程也可以被理解为对数据集的组成成份进行分解（decomposition）的过程，因此sklearn为降维模块命名为decomposition, 在对降维算法调用需要使用sklearn.decomposition模块。</p>
-<table>
-<thead>
-<tr>
-<th>算法名称</th>
-<th>参数</th>
-<th>可扩展性</th>
-<th>适用任务</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>PCA</td>
-<td>所降维度及其他超参</td>
-<td>大规模数据</td>
-<td>信号处理等</td>
-</tr>
-<tr>
-<td>FastICA</td>
-<td>所降维度及其他超参</td>
-<td>超大规模数据</td>
-<td>图形图像特征提取</td>
-</tr>
-<tr>
-<td>NMF</td>
-<td>所降维度及其他超参</td>
-<td>大规模数据</td>
-<td>图形图像特征提取</td>
-</tr>
-<tr>
-<td>LDA</td>
-<td>所降维度及其他超参</td>
-<td>大规模数据</td>
-<td>文本挖掘，主题挖掘</td>
-</tr>
-</tbody>
-</table>
-<h2 id="5-K-means聚类算法"><a href="#5-K-means聚类算法" class="headerlink" title="5 K-means聚类算法"></a>5 K-means聚类算法</h2><h3 id="5-1-算法思想"><a href="#5-1-算法思想" class="headerlink" title="5.1 算法思想"></a>5.1 算法思想</h3><p>k-means聚类算法以k为参数，把n个对象分成k个簇，使簇内具有较高的相似度，而簇间的相似较低。<a href="https://www.naftaliharris.com/blog/visualizing-k-means-clustering/" target="_blank" rel="noopener">K-means聚类算法动画演示</a>  </p>
-<p><img src="http://polq2xceb.bkt.clouddn.com/%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/K-means_convergence.gif" alt></p>
 <p>其处理过程如下：</p>
 <ol>
 <li>随机选择 k个点作为初始的聚类中心；</li>
@@ -353,7 +226,7 @@ Expenses:4512.27
 <ul>
 <li>核心点：在半径Eps内含有超过MinPts数目的点。</li>
 <li>边界点：在半径 Eps 内点的数量小于MinPts，但是落在核心点的邻域内。</li>
-<li>噪音点：既不是核心点也不是边界点的点。<br><img src="http://polq2xceb.bkt.clouddn.com/%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/DBSCAN-Illustration.png" alt><br>在图中，minPts为4。点A和其他红色点为核心点，应为在以这些点为中心，半径为Eps的圆形区域内（图中红色圆圈）至少存在4个点（包括这些点本身）。由于这些点相互相邻，它们形成为一个简单聚类。点B和点C不是核心点，但能通过其他核心点与点A相邻，因此也属于同一个聚类。点N为一个噪音点，既不属于核心点，也不是边界点。<br>DBSCAN算法流程：  </li>
+<li>噪音点：既不是核心点也不是边界点的点。<br><div align="center"><img src="http://polq2xceb.bkt.clouddn.com/%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/DBSCAN-Illustration.png" width="250" hegiht="150" align="center"></div><br>在图中，minPts为4。点A和其他红色点为核心点，应为在以这些点为中心，半径为Eps的圆形区域内（图中红色圆圈）至少存在4个点（包括这些点本身）。由于这些点相互相邻，它们形成为一个简单聚类。点B和点C不是核心点，但能通过其他核心点与点A相邻，因此也属于同一个聚类。点N为一个噪音点，既不属于核心点，也不是边界点。<br>DBSCAN算法流程：  </li>
 </ul>
 <ol>
 <li>将所有点标记为核心、边界或噪声；</li>
@@ -558,11 +431,15 @@ Extracting the top 6 Non-negative components - NMF...
   
 <nav id="article-nav">
   
-  
-    <a href="/2019/03/18/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
-      <i class="icon-circle-right"></i>
+    <a href="/2019/03/22/监督学习/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          监督学习
+        
+      </div>
     </a>
+  
   
 </nav>
 
@@ -587,7 +464,7 @@ Extracting the top 6 Non-negative components - NMF...
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-概述"><span class="toc-number">1.</span> <span class="toc-text">1 概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-样本相似性度量"><span class="toc-number">2.</span> <span class="toc-text">2 样本相似性度量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-欧式距离"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 欧式距离</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2曼哈顿距离"><span class="toc-number">2.2.</span> <span class="toc-text">2.2曼哈顿距离</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-马氏距离"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 马氏距离</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-夹角余弦"><span class="toc-number">2.4.</span> <span class="toc-text">2.4 夹角余弦</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-聚类"><span class="toc-number">3.</span> <span class="toc-text">3 聚类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-降维"><span class="toc-number">4.</span> <span class="toc-text">4 降维</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-K-means聚类算法"><span class="toc-number">5.</span> <span class="toc-text">5 K-means聚类算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-算法思想"><span class="toc-number">5.1.</span> <span class="toc-text">5.1 算法思想</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-sklearn库实现步骤"><span class="toc-number">5.2.</span> <span class="toc-text">5.2 sklearn库实现步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-3-算法应用"><span class="toc-number">5.3.</span> <span class="toc-text">5.3 算法应用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-DBSCAN聚类算法"><span class="toc-number">6.</span> <span class="toc-text">6 DBSCAN聚类算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-算法思想"><span class="toc-number">6.1.</span> <span class="toc-text">6.1 算法思想</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-sklearn库实现步骤"><span class="toc-number">6.2.</span> <span class="toc-text">6.2 sklearn库实现步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3算法应用"><span class="toc-number">6.3.</span> <span class="toc-text">6.3算法应用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-PCA降维算法"><span class="toc-number">7.</span> <span class="toc-text">7 PCA降维算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-算法思想"><span class="toc-number">7.1.</span> <span class="toc-text">7.1 算法思想</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-sklearn库实现步骤"><span class="toc-number">7.2.</span> <span class="toc-text">7.2 sklearn库实现步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-3-算法应用"><span class="toc-number">7.3.</span> <span class="toc-text">7.3 算法应用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-NMF降维算法"><span class="toc-number">8.</span> <span class="toc-text">8 NMF降维算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-算法思想"><span class="toc-number">8.1.</span> <span class="toc-text">8.1 算法思想</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#8-1-1-基本概念"><span class="toc-number">8.1.1.</span> <span class="toc-text">8.1.1 基本概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-1-2-不同矩阵分解方法对比"><span class="toc-number">8.1.2.</span> <span class="toc-text">8.1.2 不同矩阵分解方法对比</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2-sklearn库实现步骤"><span class="toc-number">8.2.</span> <span class="toc-text">8.2 sklearn库实现步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-3-算法应用"><span class="toc-number">8.3.</span> <span class="toc-text">8.3 算法应用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-基于聚类的“图像分割-”"><span class="toc-number">9.</span> <span class="toc-text">9 基于聚类的“图像分割 ”</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#9-1-图像分割"><span class="toc-number">9.1.</span> <span class="toc-text">9.1 图像分割</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-2-具体实现"><span class="toc-number">9.2.</span> <span class="toc-text">9.2 具体实现</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-概述"><span class="toc-number">1.</span> <span class="toc-text">1 概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-样本相似性度量"><span class="toc-number">2.</span> <span class="toc-text">2 样本相似性度量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-欧式距离"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 欧式距离</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-sklearn库实现步骤"><span class="toc-number">2.2.</span> <span class="toc-text">5.2 sklearn库实现步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-3-算法应用"><span class="toc-number">2.3.</span> <span class="toc-text">5.3 算法应用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-DBSCAN聚类算法"><span class="toc-number">3.</span> <span class="toc-text">6 DBSCAN聚类算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-算法思想"><span class="toc-number">3.1.</span> <span class="toc-text">6.1 算法思想</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-sklearn库实现步骤"><span class="toc-number">3.2.</span> <span class="toc-text">6.2 sklearn库实现步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3算法应用"><span class="toc-number">3.3.</span> <span class="toc-text">6.3算法应用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-PCA降维算法"><span class="toc-number">4.</span> <span class="toc-text">7 PCA降维算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-算法思想"><span class="toc-number">4.1.</span> <span class="toc-text">7.1 算法思想</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-sklearn库实现步骤"><span class="toc-number">4.2.</span> <span class="toc-text">7.2 sklearn库实现步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-3-算法应用"><span class="toc-number">4.3.</span> <span class="toc-text">7.3 算法应用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-NMF降维算法"><span class="toc-number">5.</span> <span class="toc-text">8 NMF降维算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-算法思想"><span class="toc-number">5.1.</span> <span class="toc-text">8.1 算法思想</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#8-1-1-基本概念"><span class="toc-number">5.1.1.</span> <span class="toc-text">8.1.1 基本概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-1-2-不同矩阵分解方法对比"><span class="toc-number">5.1.2.</span> <span class="toc-text">8.1.2 不同矩阵分解方法对比</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2-sklearn库实现步骤"><span class="toc-number">5.2.</span> <span class="toc-text">8.2 sklearn库实现步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-3-算法应用"><span class="toc-number">5.3.</span> <span class="toc-text">8.3 算法应用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-基于聚类的“图像分割-”"><span class="toc-number">6.</span> <span class="toc-text">9 基于聚类的“图像分割 ”</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#9-1-图像分割"><span class="toc-number">6.1.</span> <span class="toc-text">9.1 图像分割</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-2-具体实现"><span class="toc-number">6.2.</span> <span class="toc-text">9.2 具体实现</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
