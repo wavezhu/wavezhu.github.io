@@ -6,15 +6,32 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Booboo</title>
+  <title>无监督学习 | Booboo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Booboo">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="1 概述利用无标签的数据学习数据的分布或数据与数据之间的关系被称作无监督学习。• 有监督学习和无监督学习的最大区别在于数据是否有标签• 无监督学习最常应用的场景是聚类 (clustering) 和降维 (Dimension Reduction)    2 样本相似性度量评估两个不同样本之间的“相似性”，通常使用的方法就是计算两个样本之间的“距离”。使用不同的方法计算样本间距离会关系到聚类结果的好坏">
+<meta name="keywords" content="机器学习,python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="无监督学习">
+<meta property="og:url" content="http://yoursite.com/2019/03/22/无监督学习/index.html">
 <meta property="og:site_name" content="Booboo">
+<meta property="og:description" content="1 概述利用无标签的数据学习数据的分布或数据与数据之间的关系被称作无监督学习。• 有监督学习和无监督学习的最大区别在于数据是否有标签• 无监督学习最常应用的场景是聚类 (clustering) 和降维 (Dimension Reduction)    2 样本相似性度量评估两个不同样本之间的“相似性”，通常使用的方法就是计算两个样本之间的“距离”。使用不同的方法计算样本间距离会关系到聚类结果的好坏">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://polq2xceb.bkt.clouddn.com/%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/%E4%BA%8C%E7%BB%B4%E7%A9%BA%E9%97%B4%E4%B8%AD%E6%AC%A7%E5%BC%8F%E8%B7%9D%E7%A6%BB%E7%9A%84%E8%AE%A1%E7%AE%97.jpg">
+<meta property="og:image" content="http://polq2xceb.bkt.clouddn.com/%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/%E4%BA%8C%E7%BB%B4%E7%A9%BA%E9%97%B4%E4%B8%AD%E6%9B%BC%E5%93%88%E9%A1%BF%E8%B7%9D%E7%A6%BB%E7%9A%84%E8%AE%A1%E7%AE%97.jpg">
+<meta property="og:image" content="http://polq2xceb.bkt.clouddn.com/%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/%E4%BA%8C%E7%BB%B4%E7%A9%BA%E9%97%B4%E4%B8%AD%E7%9A%84%E9%A9%AC%E6%B0%8F%E8%B7%9D%E7%A6%BB.png">
+<meta property="og:image" content="http://polq2xceb.bkt.clouddn.com/%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/%E4%BA%8C%E7%BB%B4%E7%A9%BA%E9%97%B4%E4%B8%AD%E7%9A%84%E5%A4%B9%E8%A7%92%E4%BD%99%E5%BC%A6.png">
+<meta property="og:image" content="http://polq2xceb.bkt.clouddn.com/%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/K-means_convergence.gif">
+<meta property="og:image" content="http://polq2xceb.bkt.clouddn.com/%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/DBSCAN-Illustration.png">
+<meta property="og:image" content="http://polq2xceb.bkt.clouddn.com/%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/output_12_0.png">
+<meta property="og:image" content="http://polq2xceb.bkt.clouddn.com/%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/output_15_1.png">
+<meta property="og:image" content="http://polq2xceb.bkt.clouddn.com/%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/output_15_2.png">
+<meta property="og:image" content="http://polq2xceb.bkt.clouddn.com/%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/output_15_3.png">
+<meta property="og:image" content="http://polq2xceb.bkt.clouddn.com/%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/output_17_0.png">
+<meta property="og:updated_time" content="2019-03-22T08:19:45.200Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Booboo">
+<meta name="twitter:title" content="无监督学习">
+<meta name="twitter:description" content="1 概述利用无标签的数据学习数据的分布或数据与数据之间的关系被称作无监督学习。• 有监督学习和无监督学习的最大区别在于数据是否有标签• 无监督学习最常应用的场景是聚类 (clustering) 和降维 (Dimension Reduction)    2 样本相似性度量评估两个不同样本之间的“相似性”，通常使用的方法就是计算两个样本之间的“距离”。使用不同的方法计算样本间距离会关系到聚类结果的好坏">
+<meta name="twitter:image" content="http://polq2xceb.bkt.clouddn.com/%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/%E4%BA%8C%E7%BB%B4%E7%A9%BA%E9%97%B4%E4%B8%AD%E6%AC%A7%E5%BC%8F%E8%B7%9D%E7%A6%BB%E7%9A%84%E8%AE%A1%E7%AE%97.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Booboo" type="application/atom+xml">
   
@@ -152,36 +169,316 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-无监督学习" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/22/无监督学习/" class="archive-article-date">
-  	<time datetime="2019-03-22T07:19:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-22</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/22/无监督学习/">无监督学习</a>
+    <h1 class="article-title" itemprop="name">
+      无监督学习
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/03/22/无监督学习/" class="archive-article-date">
+  	<time datetime="2019-03-22T07:19:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-概述"><a href="#1-概述" class="headerlink" title="1 概述"></a>1 概述</h2><p>利用<strong>无标签的数据</strong>学习<strong>数据的分布</strong>或<strong>数据与数据之间的关系</strong>被称作无监督学习。<br>• 有监督学习和无监督学习的最大区别在于数据是否有标签<br>• 无监督学习最常应用的场景是聚类 (clustering) 和降维 (Dimension Reduction)   </p>
+<h2 id="2-样本相似性度量"><a href="#2-样本相似性度量" class="headerlink" title="2 样本相似性度量"></a>2 样本相似性度量</h2><p>评估两个不同样本之间的“相似性”，通常使用的方法就是计算两个样本之间的“距离”。使用不同的方法计算样本间距离会关系到聚类结果的好坏 。<br><a id="more"></a></p>
+<h3 id="2-1-欧式距离"><a href="#2-1-欧式距离" class="headerlink" title="2.1 欧式距离"></a>2.1 欧式距离</h3><p>欧氏距离是最常用的一种度量方法，源于欧式空间中两点的距离。欧氏距离将样品的不同属性（即各指标或各变量）之间的差别等同看待，这一点有时不能满足实际要求。例如，在教育研究中，经常遇到对人的分析和判别，个体的不同属性对于区分个体有着不同的重要性。因此，有时需要采用不同的距离函数。其计算方法如下：<br>$$d=\sqrt{\sum_{k=1}^{n}(x_{1k}-x_{2k})^{2}}$$<br><img src="http://polq2xceb.bkt.clouddn.com/%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/%E4%BA%8C%E7%BB%B4%E7%A9%BA%E9%97%B4%E4%B8%AD%E6%AC%A7%E5%BC%8F%E8%B7%9D%E7%A6%BB%E7%9A%84%E8%AE%A1%E7%AE%97.jpg" alt></p>
+<center>二维空间中欧氏距离的计算</center>
+
+<h3 id="2-2曼哈顿距离"><a href="#2-2曼哈顿距离" class="headerlink" title="2.2曼哈顿距离"></a>2.2曼哈顿距离</h3><p>曼哈顿距离也称作“城市街区距离”，类似于在城市之中驾车行驶，从一个十字路口到另一个十字路口的距离。其计算方法如下：<br>$$d=\sum_{k=1}^{n}\left | x_{1k}-x_{2k} \right |$$<br><img src="http://polq2xceb.bkt.clouddn.com/%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/%E4%BA%8C%E7%BB%B4%E7%A9%BA%E9%97%B4%E4%B8%AD%E6%9B%BC%E5%93%88%E9%A1%BF%E8%B7%9D%E7%A6%BB%E7%9A%84%E8%AE%A1%E7%AE%97.jpg" alt></p>
+<center>二维空间中曼哈顿距离的计算</center>    
+
+<h3 id="2-3-马氏距离"><a href="#2-3-马氏距离" class="headerlink" title="2.3 马氏距离"></a>2.3 马氏距离</h3><p>马氏距离(Mahalanobis distance)是由印度统计学家马哈拉诺比斯(P. C. Mahalanobis)提出的，表示数据的协方差距离。它是一种有效的计算两个未知样本集的相似度的方法。与欧氏距离不同的是它考虑到各种特性之间的联系（例如：一条关于身高的信息会带来一条关于体重的信息，因为两者是有关联的）并且是尺度无关的(scale-invariant)，即独立于测量尺度。其计算方式如下，s是协方差矩阵：<br>$$d(x_{i},x_{j})=\sqrt{(x_{i}-x_{j})^{T}s^{-1}(x_{i}-x_{j})}$$</p>
+<p><img src="http://polq2xceb.bkt.clouddn.com/%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/%E4%BA%8C%E7%BB%B4%E7%A9%BA%E9%97%B4%E4%B8%AD%E7%9A%84%E9%A9%AC%E6%B0%8F%E8%B7%9D%E7%A6%BB.png" alt></p>
+<p><center>二维空间中的马氏距离</center><br>优点：它不受量纲的影响，两点之间的马氏距离与原始数据的测量单位无关；由标准化数据和中心化数据(即原始数据与均值之差）计算出的二点之间的马氏距离相同。马氏距离还可以排除变量之间的相关性的干扰。缺点：它的缺点是夸大了变化微小的变量的作用。     </p>
+<h3 id="2-4-夹角余弦"><a href="#2-4-夹角余弦" class="headerlink" title="2.4 夹角余弦"></a>2.4 夹角余弦</h3><p>余弦相似度用向量空间中两个向量夹角的余弦值作为衡量两个样本差异的大小。余弦值越接近1，说明两个向量夹角越接近0度，表明两个向量越相似。其计算方法如下<br>$$cos(\theta )=\frac{\sum_{n}^{k=1}x_{1k}x_{2k}}{\sqrt{\sum_{n}^{k=1}x_{1k}^{2}}\sqrt{\sum_{n}^{k=1}x_{2k}^{2}}}$$<br>$$d(x_{i},x_{j})=\sqrt{(x_{i}-x_{j})^{T}s^{-1}(x_{i}-x_{j})}$$</p>
+<p><img src="http://polq2xceb.bkt.clouddn.com/%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/%E4%BA%8C%E7%BB%B4%E7%A9%BA%E9%97%B4%E4%B8%AD%E7%9A%84%E5%A4%B9%E8%A7%92%E4%BD%99%E5%BC%A6.png" alt></p>
+<p><center>二维空间中的夹角余弦</center><br>最常见的应用就是计算文本相似度。将两个文本根据他们词，建立两个向量，计算这两个向量的余弦值，就可以知道两个文本在统计学方法中他们的相似度情况。</p>
+<h2 id="3-聚类"><a href="#3-聚类" class="headerlink" title="3 聚类"></a>3 聚类</h2><p>聚类(clustering)，就是根据数据的“相似性”将数据分为多类的过程。 scikit-learn库（以后简称sklearn库）提供的常用聚类算法函数包含在sklearn.cluster这个模块中，如：K-Means，近邻传播算法，DBSCAN等。<br>以同样的数据集应用于不同的算法，可能会得到不同的结果，算法所耗费的时间也不尽相同，这是由算法的特性决定的。<br>sklearn.cluster模块提供的各聚类算法函数可以使用不同的数据形式作为输入:   </p>
+<ul>
+<li>标准数据输入格式:[样本个数，特征个数]定义的矩阵形式。</li>
+<li>相似性矩阵输入格式：即由[样本数目，样本数目]定义的矩阵形式，矩阵中的每一个元素为两个样本的相似度，如DBSCAN， AffinityPropagation(近邻传播算法)接受这种输入。如果以余弦相似度为例，则对角线元素全为1. 矩阵中每个元素的取值范围为[0,1]。  </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>方法名称</th>
+<th>参数</th>
+<th>可扩展性</th>
+<th>用例</th>
+<th>几何（使用度量）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://scikit-learn.org/stable/modules/clustering.html#k-means" target="_blank" rel="noopener">K-Means</a></td>
+<td>群集数</td>
+<td>非常大n_samples，中型n_clusters有 <a href="http://scikit-learn.org/stable/modules/clustering.html#mini-batch-kmeans" target="_blank" rel="noopener"><span>MiniBatch代码</span></a></td>
+<td>通用，甚至集群大小，平面几何，集群不太多</td>
+<td>点之间的距离</td>
+</tr>
+<tr>
+<td><a href="http://scikit-learn.org/stable/modules/clustering.html#affinity-propagation" target="_blank" rel="noopener">Affinity propagation</a></td>
+<td>阻尼，样品偏好</td>
+<td>不可扩展的n_samples</td>
+<td>许多簇，群集大小不均匀，非平面几何</td>
+<td>图距离（例如最近邻图）</td>
+</tr>
+<tr>
+<td><a href="http://scikit-learn.org/stable/modules/clustering.html#mean-shift" target="_blank" rel="noopener">Mean-shift</a></td>
+<td>带宽</td>
+<td>不可扩展n_samples</td>
+<td>许多簇，群集大小不均匀，非平面几何</td>
+<td>点之间的距离</td>
+</tr>
+<tr>
+<td><a href="http://scikit-learn.org/stable/modules/clustering.html#spectral-clustering" target="_blank" rel="noopener">Spectral clustering</a></td>
+<td>群集数</td>
+<td>中等n_samples，小n_clusters</td>
+<td>几个簇，甚至簇大小，非平面几何</td>
+<td>图距离（例如最近邻图）</td>
+</tr>
+<tr>
+<td><a href="http://scikit-learn.org/stable/modules/clustering.html#hierarchical-clustering" target="_blank" rel="noopener">Ward hierarchical clustering</a></td>
+<td>群集数</td>
+<td>大n_samples和n_clusters</td>
+<td>许多集群，可能连接限制</td>
+<td>点之间的距离</td>
+</tr>
+<tr>
+<td><a href="http://scikit-learn.org/stable/modules/clustering.html#hierarchical-clustering" target="_blank" rel="noopener">Agglomerative clustering</a></td>
+<td>簇数，链接类型，距离</td>
+<td>大n_samples和n_clusters</td>
+<td>许多集群，可能是连接约束，非欧几里德距离</td>
+<td>任何成对距离</td>
+</tr>
+<tr>
+<td><a href="http://scikit-learn.org/stable/modules/clustering.html#dbscan" target="_blank" rel="noopener">DBSCAN</a></td>
+<td>社区大小</td>
+<td>非常大n_samples，中等n_clusters</td>
+<td>非平面几何，不均匀的簇大小</td>
+<td>最近点之间的距离</td>
+</tr>
+<tr>
+<td><a href="http://scikit-learn.org/stable/modules/mixture.html#mixture" target="_blank" rel="noopener">Gaussian mixtures</a></td>
+<td>许多</td>
+<td>不可扩展</td>
+<td>平面几何，适合密度估算</td>
+<td>马哈拉诺比斯距离中心</td>
+</tr>
+<tr>
+<td><a href="http://scikit-learn.org/stable/modules/clustering.html#birch" target="_blank" rel="noopener">Birch</a></td>
+<td>分支因子，阈值，可选全局集群。</td>
+<td>大n_clusters和n_samples</td>
+<td>大数据集，异常值去除，数据简化。</td>
+<td>欧几里得距离之间的距离</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-降维"><a href="#4-降维" class="headerlink" title="4 降维"></a>4 降维</h2><p>降维，就是在保证数据所具有的代表性特性或者分布的情况下，将高维数据转化为低维数据的过程。又称分解成分中的信号（矩阵分解问题）。<br>聚类和降维都是无监督学习的典型任务，任务之间存在关联，比如某些高维数据的聚类可以通过降维处理更好的获得，另外学界研究也表明代表性的聚类算法如k-means与降维算法如NMF之间存在等价性。<br>降维是机器学习领域的一个重要研究内容，有很多被工业界和学术界接受的典型算法，截止到目前sklearn库提供7种降维算法。<br>降维过程也可以被理解为对数据集的组成成份进行分解（decomposition）的过程，因此sklearn为降维模块命名为decomposition, 在对降维算法调用需要使用sklearn.decomposition模块。</p>
+<table>
+<thead>
+<tr>
+<th>算法名称</th>
+<th>参数</th>
+<th>可扩展性</th>
+<th>适用任务</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PCA</td>
+<td>所降维度及其他超参</td>
+<td>大规模数据</td>
+<td>信号处理等</td>
+</tr>
+<tr>
+<td>FastICA</td>
+<td>所降维度及其他超参</td>
+<td>超大规模数据</td>
+<td>图形图像特征提取</td>
+</tr>
+<tr>
+<td>NMF</td>
+<td>所降维度及其他超参</td>
+<td>大规模数据</td>
+<td>图形图像特征提取</td>
+</tr>
+<tr>
+<td>LDA</td>
+<td>所降维度及其他超参</td>
+<td>大规模数据</td>
+<td>文本挖掘，主题挖掘</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-K-means聚类算法"><a href="#5-K-means聚类算法" class="headerlink" title="5 K-means聚类算法"></a>5 K-means聚类算法</h2><h3 id="5-1-算法思想"><a href="#5-1-算法思想" class="headerlink" title="5.1 算法思想"></a>5.1 算法思想</h3><p>k-means聚类算法以k为参数，把n个对象分成k个簇，使簇内具有较高的相似度，而簇间的相似较低。<a href="https://www.naftaliharris.com/blog/visualizing-k-means-clustering/" target="_blank" rel="noopener">K-means聚类算法动画演示</a>  </p>
+<p><img src="http://polq2xceb.bkt.clouddn.com/%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/K-means_convergence.gif" alt></p>
+<p>其处理过程如下：</p>
+<ol>
+<li>随机选择 k个点作为初始的聚类中心；</li>
+<li>对于剩下的点，根据其与聚类中心距离将归入最近簇</li>
+<li>对每个簇，计算所有点的均值作为新聚类中心</li>
+<li>重复 2、3直到聚类中心不再发生改变 </li>
+</ol>
+<h3 id="5-2-sklearn库实现步骤"><a href="#5-2-sklearn库实现步骤" class="headerlink" title="5.2 sklearn库实现步骤"></a>5.2 sklearn库实现步骤</h3><p>scikit-learn对于所有的机器学习算法有一个一致的接口，一般需要以下几个步骤来进行学习：  </p>
+<ol>
+<li><a href="http://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html" target="_blank" rel="noopener"><strong>初始化聚类器</strong></a>，根据不同的算法，需要给出不同的参数，一般所有的参数都有一个默认值。对于K均值聚类，我们需要给定类别的个数（聚类中心个数）n_cluster；K-means聚类算法，是一个循环更新聚类中心以及样本类别的算法，需要设定max_iter循环的次数；最后K均值聚类的结果还与初始聚类中心有关，n_init设为10意味着进行10次随机初始化，选择效果最好的一种来作为模型。init为初始聚类中心的初始化方法。       </li>
+<li>对于非监督机器学习，输入的数据是样本的特征，fit方法就可以<strong>把数据输入到聚类器里进行训练</strong>。  </li>
+<li>用分类器<strong>对未知数据进行聚类</strong>，需要使用的是聚类器的predict方法。  </li>
+</ol>
+<p>我们还可以用fit_predict方法一步完成，将数据输入到聚类器，同时对输入数据进行聚类的工作。   </p>
+<h3 id="5-3-算法应用"><a href="#5-3-算法应用" class="headerlink" title="5.3 算法应用"></a>5.3 算法应用</h3><p>数据介绍：<br>现有1999年全国31个省份城镇居民家庭平均每人全年消费性支出的八个主要变量数据，这八个变量分别是：食品、衣着、家庭设备用品及服务、医疗保健、交通和通讯、娱乐教育文化服务 、居住以及杂项商品和服务。利用已有数据，对31个省份进行聚类。</p>
+<p>实验目的：<br>通过聚类，了解1999年各个省份的消费水平在国内的情况。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> sklearn.cluster <span class="keyword">import</span> KMeans</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">loadData</span><span class="params">(filePath)</span>:</span></span><br><span class="line">    fr = open(filePath,<span class="string">'r+'</span>)</span><br><span class="line">    lines = fr.readlines()</span><br><span class="line">    retData = []</span><br><span class="line">    retCityName = []</span><br><span class="line">    <span class="keyword">for</span> line <span class="keyword">in</span> lines:</span><br><span class="line">        items = line.strip().split(<span class="string">","</span>)</span><br><span class="line">        retCityName.append(items[<span class="number">0</span>])</span><br><span class="line">        retData.append([float(items[i]) <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,len(items))])</span><br><span class="line">    <span class="keyword">return</span> retData,retCityName</span><br><span class="line">  </span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    <span class="comment">#载入数据</span></span><br><span class="line">    data,cityName = loadData(<span class="string">'datasets/city.txt'</span>)</span><br><span class="line">    <span class="comment">#初始化分类器，给定聚类中心个数为4</span></span><br><span class="line">    km = KMeans(n_clusters=<span class="number">4</span>)</span><br><span class="line">    <span class="comment">#将数据输入至聚类器，并进行聚类，得到聚类后各数据所属的标签</span></span><br><span class="line">    label = km.fit_predict(data)</span><br><span class="line">    <span class="comment">#聚类中心数据按行求和，axis=1</span></span><br><span class="line">    expenses = np.sum(km.cluster_centers_,axis=<span class="number">1</span>)</span><br><span class="line">    <span class="comment">#将城市按label分成设定的簇</span></span><br><span class="line">    CityCluster = [[],[],[],[]]</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(cityName)):</span><br><span class="line">        CityCluster[label[i]].append(cityName[i])</span><br><span class="line">    <span class="comment">#输出聚类中心数据和城市名称</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(CityCluster)):</span><br><span class="line">        print(<span class="string">"Expenses:%.2f"</span> % expenses[i])</span><br><span class="line">        print(CityCluster[i])</span><br></pre></td></tr></table></figure>
+<pre><code>Expenses:5678.62
+[&apos;天津&apos;, &apos;浙江&apos;, &apos;福建&apos;, &apos;重庆&apos;, &apos;西藏&apos;]
+Expenses:3788.76
+[&apos;河北&apos;, &apos;山西&apos;, &apos;内蒙古&apos;, &apos;辽宁&apos;, &apos;吉林&apos;, &apos;黑龙江&apos;, &apos;江西&apos;, &apos;山东&apos;, &apos;河南&apos;, &apos;贵州&apos;, &apos;陕西&apos;, &apos;甘肃&apos;, &apos;青海&apos;, &apos;宁夏&apos;, &apos;新疆&apos;]
+Expenses:7754.66
+[&apos;北京&apos;, &apos;上海&apos;, &apos;广东&apos;]
+Expenses:4512.27
+[&apos;江苏&apos;, &apos;安徽&apos;, &apos;湖南&apos;, &apos;湖北&apos;, &apos;广西&apos;, &apos;海南&apos;, &apos;四川&apos;, &apos;云南&apos;]
+</code></pre><p>通过不同的axis，numpy会沿着不同的方向进行操作：如果不设置，那么对所有的元素操作；如果axis=0，则沿着纵轴进行操作；axis=1，则沿着横轴进行操作。对于多维数组，可以总结为：<strong>设axis=i，则numpy沿着第i个下标变化的方向（第i轴的方向）进行操作。</strong></p>
+<h2 id="6-DBSCAN聚类算法"><a href="#6-DBSCAN聚类算法" class="headerlink" title="6 DBSCAN聚类算法"></a>6 DBSCAN聚类算法</h2><h3 id="6-1-算法思想"><a href="#6-1-算法思想" class="headerlink" title="6.1 算法思想"></a>6.1 算法思想</h3><p>DBSCAN聚类算法是一种基于密度的聚类，全称为Density-Based Spatial Clustering of Applications with Noise，聚类的时候不需要预先指定簇个数，最终的簇的个数不定。<br>DBSCAN算法将数据点分为三类：</p>
+<ul>
+<li>核心点：在半径Eps内含有超过MinPts数目的点。</li>
+<li>边界点：在半径 Eps 内点的数量小于MinPts，但是落在核心点的邻域内。</li>
+<li>噪音点：既不是核心点也不是边界点的点。<br><img src="http://polq2xceb.bkt.clouddn.com/%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/DBSCAN-Illustration.png" alt><br>在图中，minPts为4。点A和其他红色点为核心点，应为在以这些点为中心，半径为Eps的圆形区域内（图中红色圆圈）至少存在4个点（包括这些点本身）。由于这些点相互相邻，它们形成为一个简单聚类。点B和点C不是核心点，但能通过其他核心点与点A相邻，因此也属于同一个聚类。点N为一个噪音点，既不属于核心点，也不是边界点。<br>DBSCAN算法流程：  </li>
+</ul>
+<ol>
+<li>将所有点标记为核心、边界或噪声；</li>
+<li>删除噪声点；</li>
+<li>为距离在Eps之内的所有核心点间赋予一条边；</li>
+<li>每组连通的核心点形成一个簇；</li>
+<li>将每个边界点指派到一与之关联的核心簇中（位于哪一个核心点的半径范围之内）。</li>
+</ol>
+<h3 id="6-2-sklearn库实现步骤"><a href="#6-2-sklearn库实现步骤" class="headerlink" title="6.2 sklearn库实现步骤"></a>6.2 sklearn库实现步骤</h3><p>在sklearn库中，可以使用sklearn.cluster.DBSCAN加载DBSCAN进行聚类，主要参数有：   </p>
+<ul>
+<li>eps: 两个样本被看作邻居节点的最大距离</li>
+<li>min_samples: 簇的样本数</li>
+<li>metric：距离计算方式</li>
+</ul>
+<h3 id="6-3算法应用"><a href="#6-3算法应用" class="headerlink" title="6.3算法应用"></a>6.3算法应用</h3><p>数据介绍 ：<br>现有大学校园网的日志数据，290条大学生的校园网使用情况数据，数据包括用户ID ，设备的MAC地址，IP地址，开始上网时间，停止上网时间，上网时长，校园网套餐等。利用已有数据，分析学生上网的模式。</p>
+<p>实验目的 ：<br>通过DBSCAN 聚类，分析学生上网时间和上网时长的模式。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> sklearn.cluster <span class="keyword">as</span> skc</span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> metrics</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">mac2id=dict()</span><br><span class="line">onlinetimes=[]</span><br><span class="line"></span><br><span class="line"><span class="comment">#读取数据</span></span><br><span class="line">f=open(<span class="string">'datasets/学生月上网时间分布-TestData.txt'</span>,encoding=<span class="string">'utf-8'</span>)</span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> f:</span><br><span class="line">    <span class="comment">#拆分提取mac地址、在线时间和开始时间</span></span><br><span class="line">    mac=line.split(<span class="string">','</span>)[<span class="number">2</span>]</span><br><span class="line">    onlinetime=int(line.split(<span class="string">','</span>)[<span class="number">6</span>])</span><br><span class="line">    starttime=int(line.split(<span class="string">','</span>)[<span class="number">4</span>].split(<span class="string">' '</span>)[<span class="number">1</span>].split(<span class="string">':'</span>)[<span class="number">0</span>])</span><br><span class="line">    <span class="keyword">if</span> mac <span class="keyword">not</span> <span class="keyword">in</span> mac2id:</span><br><span class="line">        <span class="comment">#将mac地址编码为用户id，从0开始</span></span><br><span class="line">        mac2id[mac]=len(onlinetimes)</span><br><span class="line">        <span class="comment">#将开始时间、在线时间存入在线时长列表</span></span><br><span class="line">        onlinetimes.append((starttime,onlinetime))</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="comment">#如果用户多次上网，则保留最后一次上网记录</span></span><br><span class="line">        onlinetimes[mac2id[mac]]=[(starttime,onlinetime)]</span><br><span class="line"><span class="comment">#将数据转换为两列数据</span></span><br><span class="line">real_X=np.array(onlinetimes).reshape((<span class="number">-1</span>,<span class="number">2</span>))</span><br><span class="line"><span class="comment">#仅提取第一列开始时间数据</span></span><br><span class="line">X=real_X[:,<span class="number">0</span>:<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#初始化DBSCAN聚类器，并进行</span></span><br><span class="line">db=skc.DBSCAN(eps=<span class="number">0.01</span>,min_samples=<span class="number">20</span>).fit(X)</span><br><span class="line"></span><br><span class="line"><span class="comment">#提取聚类后数据所属标签，并打印</span></span><br><span class="line">labels = db.labels_</span><br><span class="line">print(<span class="string">'Labels:'</span>)</span><br><span class="line">print(labels)</span><br><span class="line"></span><br><span class="line"><span class="comment">#标签为-1的数据为噪音点，计算噪音数据比例</span></span><br><span class="line">raito=len(labels[labels[:] == <span class="number">-1</span>]) / len(labels)</span><br><span class="line">print(<span class="string">'Noise raito:'</span>,format(raito, <span class="string">'.2%'</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment">#计算簇的个数，并打印</span></span><br><span class="line">n_clusters_ = len(set(labels)) - (<span class="number">1</span> <span class="keyword">if</span> <span class="number">-1</span> <span class="keyword">in</span> labels <span class="keyword">else</span> <span class="number">0</span>)</span><br><span class="line">print(<span class="string">'Estimated number of clusters: %d'</span> % n_clusters_)</span><br><span class="line"></span><br><span class="line"><span class="comment">#计算轮廓系数评估聚类结果</span></span><br><span class="line">print(<span class="string">"Silhouette Coefficient: %0.3f"</span>% metrics.silhouette_score(X, labels))</span><br><span class="line"></span><br><span class="line"><span class="comment">#打印各簇标号以及各簇内数据</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(n_clusters_):</span><br><span class="line">    print(<span class="string">'Cluster '</span>,i,<span class="string">':'</span>)</span><br><span class="line">    print(list(X[labels == i].flatten()))</span><br><span class="line"></span><br><span class="line"><span class="comment">#转换为直方图分析</span></span><br><span class="line">plt.hist(X,<span class="number">24</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>Labels:
+[ 0 -1  0  1 -1  1  0  1  2 -1  1  0  1  1  3 -1 -1  3 -1  1  1 -1  1  3  4
+ -1  1  1  2  0  2  2 -1  0  1  0  0  0  1  3 -1  0  1  1  0  0  2 -1  1  3
+  1 -1  3 -1  3  0  1  1  2  3  3 -1 -1 -1  0  1  2  1 -1  3  1  1  2  3  0
+  1 -1  2  0  0  3  2  0  1 -1  1  3 -1  4  2 -1 -1  0 -1  3 -1  0  2  1 -1
+ -1  2  1  1  2  0  2  1  1  3  3  0  1  2  0  1  0 -1  1  1  3 -1  2  1  3
+  1  1  1  2 -1  5 -1  1  3 -1  0  1  0  0  1 -1 -1 -1  2  2  0  1  1  3  0
+  0  0  1  4  4 -1 -1 -1 -1  4 -1  4  4 -1  4 -1  1  2  2  3  0  1  0 -1  1
+  0  0  1 -1 -1  0  2  1  0  2 -1  1  1 -1 -1  0  1  1 -1  3  1  1 -1  1  1
+  0  0 -1  0 -1  0  0  2 -1  1 -1  1  0 -1  2  1  3  1  1 -1  1  0  0 -1  0
+  0  3  2  0  0  5 -1  3  2 -1  5  4  4  4 -1  5  5 -1  4  0  4  4  4  5  4
+  4  5  5  0  5  4 -1  4  5  5  5  1  5  5  0  5  4  4 -1  4  4  5  4  0  5
+  4 -1  0  5  5  5 -1  4  5  5  5  5  4  4]
+Noise raito: 22.15%
+Estimated number of clusters: 6
+Silhouette Coefficient: 0.710
+Cluster  0 :
+[22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22]
+Cluster  1 :
+[23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23]
+Cluster  2 :
+[20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20]
+Cluster  3 :
+[21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21]
+Cluster  4 :
+[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8]
+Cluster  5 :
+[7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7]
+
+
+
+
+
+(array([  1.,   0.,   1.,   0.,   0.,   2.,   2.,  24.,  28.,   3.,   8.,
+          4.,   5.,   4.,   4.,   5.,   7.,   3.,   8.,   7.,  28.,  25.,
+         55.,  65.]),
+ array([  0.        ,   0.95833333,   1.91666667,   2.875     ,
+          3.83333333,   4.79166667,   5.75      ,   6.70833333,
+          7.66666667,   8.625     ,   9.58333333,  10.54166667,
+         11.5       ,  12.45833333,  13.41666667,  14.375     ,
+         15.33333333,  16.29166667,  17.25      ,  18.20833333,
+         19.16666667,  20.125     ,  21.08333333,  22.04166667,  23.        ]),
+ &lt;a list of 24 Patch objects&gt;)
+</code></pre><p>轮廓系数（Silhouette Coefficient），是聚类效果好坏的一种评价方式。最早由 Peter J. Rousseeuw 在 1986 提出。它结合内聚度和分离度两种因素。可以用来在相同原始数据的基础上用来评价不同算法、或者算法不同运行方式对聚类结果所产生的影响。</p>
+<h2 id="7-PCA降维算法"><a href="#7-PCA降维算法" class="headerlink" title="7 PCA降维算法"></a>7 PCA降维算法</h2><h3 id="7-1-算法思想"><a href="#7-1-算法思想" class="headerlink" title="7.1 算法思想"></a>7.1 算法思想</h3><p>主成分分析（Principal Component Analysis，PCA）是一种常用的数据分析方法。PCA通过线性变换将原始数据变换为一组各维度线性无关的表示，可用于提取数据的主要特征分量，常用于高维数据的降维。  </p>
+<p>PCA主要用于数据降维，对于一系列样本特征组成的多维向量，多维向量里的某些元素本身没有区分性，比如某个特征在所有的样本中都为1，或者与1差距不大，那么这个元素本身就没有区分性，用它做特征来区分，贡献会非常小。所以我们的目的是找那些变化大的元素，即方差大的那些维，而去除掉那些变化不大的维，从而使特征留下的都是“精品”，而且计算量也变小了。 对于一个k维的特征来说，相当于它的每一维特征与其他维度都是正交的（相当于在多维坐标系中，坐标轴都是垂直的），那么我们可以变换这些维度的坐标系，从而使这个特征在某些维度上方差大，而在某些维上方差很小。例如，一个45度倾斜的椭圆，在第一坐标系，如果按照x,y坐标来投影，这些点的x和y的属性很难用于区分他们，因为他们在x,y轴上坐标变化的方差都差不多，我们无法根据这个点的某个x属性来判断这个点是哪个，而如果将坐标轴旋转，以椭圆长轴为x轴，则椭圆在长轴上的分布比较长，方差大，而在短轴上的分布短，方差小，所以可以考虑只保留这些点的长轴属性，来区分椭圆上的点，这样，区分性比x,y轴的方法要好！<br>所以我们的做法就是求得一个k维特征的投影矩阵，这个投影矩阵可以将特征从高维降到低维。投影矩阵也可以叫做变换矩阵。新的低维特征必须每个维都正交，特征向量都是正交的。通过求样本矩阵的协方差矩阵，然后求出协方差矩阵的特征向量，这些特征向量就可以构成这个投影矩阵了。特征向量的选择取决于协方差矩阵的特征值的大小。</p>
+<p>举例：<br>对于一个训练集，100个对象模板，特征是10维，那么它可以建立一个100*10的矩阵，作为样本。求这个样本的协方差矩阵，得到一个10*10的协方差矩阵，然后求出这个协方差矩阵的特征值和特征向量，应该有10个特征值和特征向量，我们根据特征值的大小，取前四个特征值所对应的特征向量，构成一个10*4的矩阵，这个矩阵就是我们要求的特征矩阵，100*10的样本矩阵乘以这个10*4的特征矩阵，就得到了一个100*4的新的降维之后的样本矩阵，每个特征的维数下降了。   </p>
+<p>当给定一个测试的特征集之后，比如1*10维的特征，乘以上面得到的10*4的特征矩阵，便可以得到一个1*4的特征，用这个特征去分类。<br>所以做PCA实际上是求得这个投影矩阵，用高维的特征乘以这个投影矩阵，便可以将高维特征的维数下降到指定的维数。   </p>
+<p>PCA降维算法步骤：<br>输入：样本集 $D= { x_{1},x_{2},…x_{m} }$ ，低维空间维数  $d^{‘}$<br>过程：  </p>
+<ol>
+<li>对所有样本进行中心化：$x_{i}\leftarrow x_{i}-\frac{1}{m}\sum_{i=1}^{m}x_{i}$；  </li>
+<li>计算样本的协方差矩阵$XX^{T}$；   </li>
+<li>对协方差矩阵$XX^{T}$做特征值分解；  </li>
+<li>取最大的$d^{‘}$个特征值所对应的特征向量$w_{1},w_{2},…,w_{d^{‘}}$。    </li>
+</ol>
+<p>输出： 投影矩阵$W=(w_{1},w_{2},…,w_{d^{‘}})$。    </p>
+<h3 id="7-2-sklearn库实现步骤"><a href="#7-2-sklearn库实现步骤" class="headerlink" title="7.2 sklearn库实现步骤"></a>7.2 sklearn库实现步骤</h3><p>在sklearn库中，可以使用sklearn.decomposition.PCA加载PCA进行聚类，主要参数有：</p>
+<ul>
+<li>n_components: 指定主成分的个数，即降维后数据的维度</li>
+<li>svd_solver: 设置特征值分解的方法，默认为’auto’，其他可选有’full’,’arpack’,’randomized’。   </li>
+</ul>
+<h3 id="7-3-算法应用"><a href="#7-3-算法应用" class="headerlink" title="7.3 算法应用"></a>7.3 算法应用</h3><p>数据介绍： Iris数据集是常用的分类实验数据集，由Fisher, 1936收集整理。Iris也称鸢尾花卉数据集，是一类多重变量分析的数据集。数据集包含150个数据集，分为3类，每类50个数据，每个数据包含4个属性。可通过花萼长度，花萼宽度，花瓣长度，花瓣宽度4个属性预测鸢尾花卉属于（Setosa，Versicolour，Virginica）三个种类中的哪一类。 </p>
+<p>实验目的： 已知鸢尾花数据是4维的，共三类样本。使用 PCA 实现对鸢尾花数据进行降维，实现在二维平面上的可视化。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> sklearn.decomposition <span class="keyword">import</span> PCA</span><br><span class="line"><span class="keyword">from</span> sklearn.datasets <span class="keyword">import</span> load_iris</span><br><span class="line"></span><br><span class="line"><span class="comment">#以字典形式加载鸢尾花数据集</span></span><br><span class="line">data = load_iris()</span><br><span class="line"><span class="comment">#使用y表示数据集中的标签</span></span><br><span class="line">y = data.target</span><br><span class="line"><span class="comment">#使用X表示数据集中的属性数据</span></span><br><span class="line">X = data.data</span><br><span class="line"><span class="comment">#加载PCA算法，设置降维后主成分数目为2</span></span><br><span class="line">pca = PCA(n_components=<span class="number">2</span>)</span><br><span class="line"><span class="comment">#对原始数据进行降维，保存在reduced_X中</span></span><br><span class="line">reduced_X = pca.fit_transform(X)</span><br><span class="line"></span><br><span class="line"><span class="comment">#第一类数据点</span></span><br><span class="line">red_x, red_y = [], []</span><br><span class="line"><span class="comment">#第二类数据点</span></span><br><span class="line">blue_x, blue_y = [], []</span><br><span class="line"><span class="comment">#第三类数据点</span></span><br><span class="line">green_x, green_y = [], []</span><br><span class="line"></span><br><span class="line"><span class="comment">#按照鸢尾花的类别将降维后的数据保存在不同列表中</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(reduced_X)):</span><br><span class="line">    <span class="keyword">if</span> y[i] == <span class="number">0</span>:</span><br><span class="line">        red_x.append(reduced_X[i][<span class="number">0</span>])</span><br><span class="line">        red_y.append(reduced_X[i][<span class="number">1</span>])</span><br><span class="line">    <span class="keyword">elif</span> y[i] == <span class="number">1</span>:</span><br><span class="line">        blue_x.append(reduced_X[i][<span class="number">0</span>])</span><br><span class="line">        blue_y.append(reduced_X[i][<span class="number">1</span>])</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        green_x.append(reduced_X[i][<span class="number">0</span>])</span><br><span class="line">        green_y.append(reduced_X[i][<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment">#绘制三种数据列表的散点图</span></span><br><span class="line">plt.scatter(red_x, red_y, c=<span class="string">'r'</span>, marker=<span class="string">'x'</span>)</span><br><span class="line">plt.scatter(blue_x, blue_y, c=<span class="string">'b'</span>, marker=<span class="string">'D'</span>)</span><br><span class="line">plt.scatter(green_x, green_y, c=<span class="string">'g'</span>, marker=<span class="string">'.'</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p><img src="http://polq2xceb.bkt.clouddn.com/%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/output_12_0.png" alt></p>
+<p>可以看出，降维后的数据仍能够清晰地分成三类。这样不仅能削减数据的维度，降低分类任务的工作量，还能保证分类的质量。</p>
+<h2 id="8-NMF降维算法"><a href="#8-NMF降维算法" class="headerlink" title="8 NMF降维算法"></a>8 NMF降维算法</h2><h3 id="8-1-算法思想"><a href="#8-1-算法思想" class="headerlink" title="8.1 算法思想"></a>8.1 算法思想</h3><h4 id="8-1-1-基本概念"><a href="#8-1-1-基本概念" class="headerlink" title="8.1.1 基本概念"></a>8.1.1 基本概念</h4><p>给出非负矩阵分解的定义为：找到非负矩阵$W$与$H$使得$V=WH$。在计算中等式两边很难完全相等。在计算中往往是根据某更新法则迭代更新出两个乘子，当上式左右两端的距离（如欧式距离）满足我们设定的大小，停止迭代。   </p>
+<h4 id="8-1-2-不同矩阵分解方法对比"><a href="#8-1-2-不同矩阵分解方法对比" class="headerlink" title="8.1.2 不同矩阵分解方法对比"></a>8.1.2 不同矩阵分解方法对比</h4><p>将非负矩阵分解（NMF）、主成份分析（PCA）和向量量化（VQ）分别作用于人脸数据集，如图8.1。三种方法均用基图像的线性组合表示人脸图像，但结果略有差异。VQ的基图像由人脸原型组成，每个人脸原型都是一个完整的人脸。PCA的基图像都是特征脸，一些特征脸像是完整脸的扭曲版本。NMF的基图像完全不同，它的基图像展现的是完整人脸的局部特征。  </p>
+<p>为了对VQ、PCA、NMF不同矩阵分解方法进行对比，有必要在矩阵分解框架中描述这三种方法。人脸图像数据用一个$n\times m$矩阵$V$表示，该图像包含n行m列非负像素值。这三种方法可由$V\approx WH$的分解形式近似构建，或者$V_{i\mu }=WH_{i\mu }= \sum_{a=1}^{r}W_{ia}H_{a\mu }$，W被称为基图像，拥有r列数据。H被称为权重矩阵，与矩阵V中的人脸呈一一对应的关系。权重矩阵由权重系数组成，基图像的线性组合构成了人脸图像。矩阵$W$和$H$的维度为 $n\times r$ 和 $r \times m$ 。矩阵分解的秩$r$因满足$(n+m)r&lt; nm$，乘积$WH$可以视为是矩阵V数据的精简形式。  </p>
+<p>PCA、VQ和NMF的差异主要源于矩阵因子$W$和$H$的约束条件。在VQ分解中，每一列的$H$被约束为一个一元矢量。其中只有一个元素为1，其他元素为0。换一句话说，在因式分解$V\approx WH$中每个人脸图像矩阵V中的列)都与单个基图像(基图像W中的列)相似。在图8.1中对于特定人脸图像的一元权重矩阵在VQ基图像的旁边展示。这个一元权重矩阵促使VQ的基图像是原型人脸图像。   </p>
+<p>PCA约束基图像$W$的每列相互正交，权重矩阵$H$的每行相互正交。这个约束相较于VQ要松弛的多，每个人脸图像大致是所有基图像或特征脸的线性组合。由于权重矩阵中元素符号的任意性，所以基矩阵表示出来并不像$VQ$中原型脸那样的直观可解释。此时将$W$的列数据画出来并不一定能直接看到一张“脸”。但是在统计上可以解释为最大方差方向，我们把这些“脸”称为“特征脸”。在图8.1中对于特定人脸图像的分布式权重矩阵在特征脸的旁边展示。<br>在NMF中，加入了非负约束。与VQ的单一元素不为0不同，NMF允许基图像$H$间的加权结合来表示脸部图像$V$；与PCA不同，NMF的加权系数H中的元素都为非负的。前两者得到的都是一个完整的脸部特征基图像，而NMF得到的是脸部子特征。  </p>
+<p>通俗点说，VQ是用一张完整的图像直接代表源脸部图像；PCA是将几个完整人脸加减压成一张脸；而NMF是取甲的眼睛，乙的鼻子，丙的嘴巴直接拼成一张脸。这样解释虽然细节上略有不妥，但不失其概念上的意义。</p>
+<h3 id="8-2-sklearn库实现步骤"><a href="#8-2-sklearn库实现步骤" class="headerlink" title="8.2 sklearn库实现步骤"></a>8.2 sklearn库实现步骤</h3><p>在sklearn库中，可以使用sklearn.decomposition.NMF加载NMF进行降维，主要参数有：  </p>
+<ul>
+<li>n_components: 用于指定分解后的矩阵的单个维度k</li>
+<li>svd_solver: W矩阵和H矩阵的初始化方式，默认为’nndsvdar’</li>
+</ul>
+<h3 id="8-3-算法应用"><a href="#8-3-算法应用" class="headerlink" title="8.3 算法应用"></a>8.3 算法应用</h3><p>数据介绍:ORL人脸库是由英国剑桥Olivetti实验室从1992年4月到1994年4月期间拍摄的一系列人脸图像组成，共有40个不同年龄、不同性别和不同种族的对象。每个对象10幅图像共计400幅灰度图像组成，图像尺寸是92×112，图像背景为黑色。其中人脸部分表情和细节均有变化，例如笑与不笑、眼睛睁着或闭着，戴或不戴眼镜等，人脸姿态也有变化，其深度旋转和平面旋转可达20度，人脸尺寸也有最多10%的变化。该库是目前使用最广泛的标准数据库，它含有大量的比较结果。</p>
+<p>实验目的:目标：已知Olivetti人脸数据共400个，每数据是 64*64大小。由于NMF分解得到的$W$矩阵相当于从原始矩阵中提取的特征，那么就可以使用NMF对400个人脸数据进行 特征提取。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> sklearn.datasets <span class="keyword">import</span> fetch_olivetti_faces</span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> decomposition</span><br><span class="line"><span class="comment">#加载RandomState用于创建随机种子</span></span><br><span class="line"><span class="keyword">from</span> numpy.random <span class="keyword">import</span> RandomState</span><br><span class="line"></span><br><span class="line"><span class="comment">#设置图像展示时的排列情况，2行3列</span></span><br><span class="line">n_row, n_col = <span class="number">2</span>, <span class="number">3</span></span><br><span class="line"><span class="comment">#设置提取的特征的数目，选取打乱后图像前6个图像</span></span><br><span class="line">n_components = n_row * n_col</span><br><span class="line"><span class="comment">#设置人脸数据图片的大小</span></span><br><span class="line">image_shape = (<span class="number">64</span>, <span class="number">64</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#设置图像的展示方式</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">plot_gallery</span><span class="params">(title, images, n_col=n_col, n_row=n_row)</span>:</span></span><br><span class="line">    <span class="comment">#创建图片，并指定图片大小（英寸）</span></span><br><span class="line">    plt.figure(figsize=(<span class="number">2.</span> * n_col, <span class="number">2.26</span> * n_row))</span><br><span class="line">    <span class="comment">#设置标题及字号大小</span></span><br><span class="line">    plt.suptitle(title, size=<span class="number">16</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="comment">#enumerate() 函数用于将一个可遍历的数据对象(如列表、元组或字符串)组合为一个索引</span></span><br><span class="line">    <span class="comment">#序列，同时列出数据和数据下标，一般用在 for 循环当中。</span></span><br><span class="line">    <span class="keyword">for</span> i, comp <span class="keyword">in</span> enumerate(images):</span><br><span class="line">        <span class="comment">#选择绘制的子图位置</span></span><br><span class="line">        plt.subplot(n_row, n_col, i + <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment">#对数值归一化，并以灰度图形式显示，采用最近邻插值法</span></span><br><span class="line">        vmax = max(comp.max(), -comp.min())</span><br><span class="line">        plt.imshow(comp.reshape(image_shape), cmap=plt.cm.gray,interpolation=<span class="string">'nearest'</span>, vmin=-vmax, vmax=vmax)</span><br><span class="line">        </span><br><span class="line">        <span class="comment">#去除子图坐标轴</span></span><br><span class="line">        plt.xticks(())</span><br><span class="line">        plt.yticks(())</span><br><span class="line">    </span><br><span class="line">    <span class="comment">#对子图位置及间隔调整</span></span><br><span class="line">    plt.subplots_adjust(<span class="number">0.01</span>, <span class="number">0.05</span>, <span class="number">0.99</span>, <span class="number">0.94</span>, <span class="number">0.04</span>, <span class="number">0.</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#加载数据，并打乱顺序</span></span><br><span class="line">dataset = fetch_olivetti_faces(shuffle=<span class="literal">True</span>, random_state=RandomState(<span class="number">0</span>))</span><br><span class="line">faces = dataset.data</span><br><span class="line"></span><br><span class="line">plot_gallery(<span class="string">"First centered Olivetti faces"</span>, faces[:n_components])</span><br><span class="line"></span><br><span class="line"><span class="comment">#创建特征提取的对象NMF，使用PCA作为对比：</span></span><br><span class="line">estimators = [</span><br><span class="line">    <span class="comment">#whiten的目的就是降低输入的冗余性</span></span><br><span class="line">    (<span class="string">'Eigenfaces - PCA using randomized SVD'</span>,</span><br><span class="line">         decomposition.PCA(n_components,whiten=<span class="literal">True</span>)),</span><br><span class="line"></span><br><span class="line">    (<span class="string">'Non-negative components - NMF'</span>,</span><br><span class="line">         decomposition.NMF(n_components, init=<span class="string">'nndsvda'</span>, tol=<span class="number">5e-3</span>))</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="comment">###############################################################################</span></span><br><span class="line"><span class="comment">#降维后数据可视化</span></span><br><span class="line"><span class="comment">#分别调用PCA和NMF</span></span><br><span class="line"><span class="keyword">for</span> name, estimator <span class="keyword">in</span> estimators:</span><br><span class="line">    print(<span class="string">"Extracting the top %d %s..."</span> % (n_components, name))</span><br><span class="line">    print(faces.shape)</span><br><span class="line">    <span class="comment">#调用PCA或NMF提取特征</span></span><br><span class="line">    estimator.fit(faces)</span><br><span class="line">    <span class="comment">#获取提取的特征</span></span><br><span class="line">    components_ = estimator.components_</span><br><span class="line">    <span class="comment">#按照固定的形式排列</span></span><br><span class="line">    plot_gallery(name, components_[:n_components])</span><br><span class="line"></span><br><span class="line"><span class="comment">#显示图像</span></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<pre><code>downloading Olivetti faces from file:///E:/temp/olivettifaces.mat to C:\SPB_Data\scikit_learn_data
+Extracting the top 6 Eigenfaces - PCA using randomized SVD...
+(400, 4096)
+Extracting the top 6 Non-negative components - NMF...
+(400, 4096)
+</code></pre><p><img src="http://polq2xceb.bkt.clouddn.com/%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/output_15_1.png" alt="png"></p>
+<p><img src="http://polq2xceb.bkt.clouddn.com/%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/output_15_2.png" alt="png"></p>
+<p><img src="http://polq2xceb.bkt.clouddn.com/%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/output_15_3.png" alt="png"></p>
+<h2 id="9-基于聚类的“图像分割-”"><a href="#9-基于聚类的“图像分割-”" class="headerlink" title="9 基于聚类的“图像分割 ”"></a>9 基于聚类的“图像分割 ”</h2><h3 id="9-1-图像分割"><a href="#9-1-图像分割" class="headerlink" title="9.1 图像分割"></a>9.1 图像分割</h3><p>利用的灰度、颜色纹理形状等特征， 把图像分成若干个互不重叠的区域，并使这些特征在同一内呈现相似性不的域之间存在明显的差异性。然后就可以将分割的图像中具有独特性质的区域提取出来用于不同的研究。<br>图像分割技术已在实际生活中得到广泛的应用。例如：机车检验领域，可以应用到轮毂裂纹图像的分割，及时发现保证行车安全；在生物医学工程方面，对肝脏CT图像进行分割，为临床治疗和病理学研究提供帮助。</p>
+<p>图像分割常用方法：</p>
+<ol>
+<li>阈值分割：对图像灰度进行度量，设置不同类别的阈值，达到分隔的目的。 </li>
+<li>边缘分割：对图像进行检测，即检测图像中灰度值发生跳变的地方，则为一片区域的边缘。</li>
+<li>直方图法：对图像的颜色建立直方图，而直方图的波峰波谷能够表示一块区域颜色值的范围，来达到分割目的。</li>
+<li>特定理论：基于聚类分析 、小波变换等理论完成图像分割。  </li>
+</ol>
+<h3 id="9-2-具体实现"><a href="#9-2-具体实现" class="headerlink" title="9.2 具体实现"></a>9.2 具体实现</h3><p>数据介绍：<br>本实例中的数据可以是任意大小的图片，为了使效果更佳直观可以采用区分度比较明显的图片。</p>
+<p>实验目的：<br>利用K-means聚类算法对图像像素点颜色进行聚类实现简单的图像分割</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> PIL.Image <span class="keyword">as</span> image</span><br><span class="line"><span class="keyword">from</span> sklearn.cluster <span class="keyword">import</span> KMeans</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="comment">#读取图像，载入数据</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">loadData</span><span class="params">(filePath)</span>:</span></span><br><span class="line">    f = open(filePath,<span class="string">'rb'</span>)</span><br><span class="line">    data = []</span><br><span class="line">    img = image.open(f)</span><br><span class="line">    m,n = img.size</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(m):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(n):</span><br><span class="line">            x,y,z = img.getpixel((i,j))</span><br><span class="line">            data.append([x/<span class="number">256.0</span>,y/<span class="number">256.0</span>,z/<span class="number">256.0</span>])</span><br><span class="line">    f.close()</span><br><span class="line">    <span class="keyword">return</span> np.mat(data),m,n</span><br><span class="line"></span><br><span class="line"><span class="comment">#载入数据</span></span><br><span class="line">imgData,row,col = loadData(<span class="string">'images/ac.jpg'</span>)</span><br><span class="line"><span class="comment">#进行聚类</span></span><br><span class="line">label = KMeans(n_clusters=<span class="number">4</span>).fit_predict(imgData)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 按照标签，确定灰度级</span></span><br><span class="line">label = label.reshape([row,col])</span><br><span class="line">pic_new = image.new(<span class="string">"L"</span>, (row, col))</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(row):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(col):</span><br><span class="line">        pic_new.putpixel((i,j), int(<span class="number">256</span>/(label[i][j]+<span class="number">1</span>)))</span><br><span class="line"></span><br><span class="line"><span class="comment">#显示结果</span></span><br><span class="line">plt.imshow(pic_new,cmap = plt.cm.gray)</span><br><span class="line">plt.axis(<span class="string">'off'</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p><img src="http://polq2xceb.bkt.clouddn.com/%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/output_17_0.png" alt="png"></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -197,46 +494,119 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/03/22/无监督学习/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/18/hello-world/" class="archive-article-date">
-  	<time datetime="2019-03-18T02:48:25.568Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-18</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/03/18/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/18/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-概述"><span class="toc-number">1.</span> <span class="toc-text">1 概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-样本相似性度量"><span class="toc-number">2.</span> <span class="toc-text">2 样本相似性度量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-欧式距离"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 欧式距离</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2曼哈顿距离"><span class="toc-number">2.2.</span> <span class="toc-text">2.2曼哈顿距离</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-马氏距离"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 马氏距离</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-夹角余弦"><span class="toc-number">2.4.</span> <span class="toc-text">2.4 夹角余弦</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-聚类"><span class="toc-number">3.</span> <span class="toc-text">3 聚类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-降维"><span class="toc-number">4.</span> <span class="toc-text">4 降维</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-K-means聚类算法"><span class="toc-number">5.</span> <span class="toc-text">5 K-means聚类算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-算法思想"><span class="toc-number">5.1.</span> <span class="toc-text">5.1 算法思想</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-sklearn库实现步骤"><span class="toc-number">5.2.</span> <span class="toc-text">5.2 sklearn库实现步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-3-算法应用"><span class="toc-number">5.3.</span> <span class="toc-text">5.3 算法应用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-DBSCAN聚类算法"><span class="toc-number">6.</span> <span class="toc-text">6 DBSCAN聚类算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-算法思想"><span class="toc-number">6.1.</span> <span class="toc-text">6.1 算法思想</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-sklearn库实现步骤"><span class="toc-number">6.2.</span> <span class="toc-text">6.2 sklearn库实现步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3算法应用"><span class="toc-number">6.3.</span> <span class="toc-text">6.3算法应用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-PCA降维算法"><span class="toc-number">7.</span> <span class="toc-text">7 PCA降维算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-算法思想"><span class="toc-number">7.1.</span> <span class="toc-text">7.1 算法思想</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-sklearn库实现步骤"><span class="toc-number">7.2.</span> <span class="toc-text">7.2 sklearn库实现步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-3-算法应用"><span class="toc-number">7.3.</span> <span class="toc-text">7.3 算法应用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-NMF降维算法"><span class="toc-number">8.</span> <span class="toc-text">8 NMF降维算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-算法思想"><span class="toc-number">8.1.</span> <span class="toc-text">8.1 算法思想</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#8-1-1-基本概念"><span class="toc-number">8.1.1.</span> <span class="toc-text">8.1.1 基本概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-1-2-不同矩阵分解方法对比"><span class="toc-number">8.1.2.</span> <span class="toc-text">8.1.2 不同矩阵分解方法对比</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2-sklearn库实现步骤"><span class="toc-number">8.2.</span> <span class="toc-text">8.2 sklearn库实现步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-3-算法应用"><span class="toc-number">8.3.</span> <span class="toc-text">8.3 算法应用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-基于聚类的“图像分割-”"><span class="toc-number">9.</span> <span class="toc-text">9 基于聚类的“图像分割 ”</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#9-1-图像分割"><span class="toc-number">9.1.</span> <span class="toc-text">9.1 图像分割</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-2-具体实现"><span class="toc-number">9.2.</span> <span class="toc-text">9.2 具体实现</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -259,8 +629,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

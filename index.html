@@ -55,6 +55,8 @@
 			
 				<li><a href="/">主页</a></li>
 	        
+				<li><a href="/tags">标签</a></li>
+	        
 				<li><a href="/resume">简历</a></li>
 	        
 			</ul>
@@ -109,6 +111,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -126,12 +130,14 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/resume">简历</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags">标签</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/resume">简历</a></li>
 		        
 				</ul>
 			</nav>
@@ -147,6 +153,87 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-无监督学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/22/无监督学习/">无监督学习</a>
+    </h1>
+  
+
+        
+        <a href="/2019/03/22/无监督学习/" class="archive-article-date">
+  	<time datetime="2019-03-22T07:19:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-概述"><a href="#1-概述" class="headerlink" title="1 概述"></a>1 概述</h2><p>利用<strong>无标签的数据</strong>学习<strong>数据的分布</strong>或<strong>数据与数据之间的关系</strong>被称作无监督学习。<br>• 有监督学习和无监督学习的最大区别在于数据是否有标签<br>• 无监督学习最常应用的场景是聚类 (clustering) 和降维 (Dimension Reduction)   </p>
+<h2 id="2-样本相似性度量"><a href="#2-样本相似性度量" class="headerlink" title="2 样本相似性度量"></a>2 样本相似性度量</h2><p>评估两个不同样本之间的“相似性”，通常使用的方法就是计算两个样本之间的“距离”。使用不同的方法计算样本间距离会关系到聚类结果的好坏 。<br>
+        
+          <a class="article-more-a" href="/2019/03/22/无监督学习/#more">more >></a>
+        
+      
+
+      
+    </p></div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">机器学习</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/03/22/无监督学习/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -323,6 +410,14 @@ MathJax.Hub.Queue(function() {
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
