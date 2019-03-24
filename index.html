@@ -208,7 +208,9 @@
 </table>
 <p>由于$\theta = \sum_{i=0}^{n}d_{i}\theta_{i}=\sum_{i=0}^{n}arctan\left ( d_{i}2^{-i} \right )$，$\theta$的限定范围为$\lim_{n \to \infty }-\sum_{i=0}^{n}arctan\left ( 2^{-i} \right )$到$\lim_{n \to \infty }\sum_{i=0}^{n}arctan\left ( 2^{-i} \right )$，约为-1.74328662047234到1.74328662047234，即$-99.88296583468961^{\circ}$到$-99.88296583468961^{\circ}$。为了方便计算，开始计算前将目标角度$\theta$转换到$\left (-\pi,\pi  \right ) $。计算完成后再转化至对应区间。</p>
 <p>而且随着$n$的增加，$K\left ( n \right )$趋于稳定，即：<br>$$K = \lim_{n \to \infty }K\left ( n \right )=K\left ( n \right )= \lim_{n \to \infty }\prod_{i=0}^{n}\frac{1}{\sqrt{1+2^{-2i}}}\approx 0.607252935008812561694$$<br>所以<br>$$\begin{bmatrix} x_{target} \\ y_{target}\end{bmatrix} = K\left ( n \right )\begin{bmatrix} 1 &amp; -d_{0}2^{0} \\ d_{0}2^{0} &amp; 1 \end{bmatrix} \cdots  \begin{bmatrix} 1 &amp; -d_{i}2^{-i} \\ d_{i}2^{-i} &amp; 1 \end{bmatrix}\cdots \begin{bmatrix} 1 &amp; -d_{n}2^{-n} \\ d_{n}2^{-n} &amp; 1 \end{bmatrix}\begin{bmatrix} x_{0} \\ y_{0}\end{bmatrix}$$<br>根据以上三点，即可将对应三角函数运算转化为基本的加减和移位运算。为了简化计算还可以将$x_{0}$取为$K$，$y_{0}$取为$0$，此时<br>$$\begin{bmatrix} cos \theta \\ sin \theta\end{bmatrix} = \begin{bmatrix} 1 &amp; -d_{0}2^{0} \\ d_{0}2^{0} &amp; 1 \end{bmatrix} \cdots  \begin{bmatrix} 1 &amp; -d_{i}2^{-i} \\ d_{i}2^{-i} &amp; 1 \end{bmatrix}\cdots \begin{bmatrix} 1 &amp; -d_{n}2^{-n} \\ d_{n}2^{-n} &amp; 1 \end{bmatrix}\begin{bmatrix} K \\ 0\end{bmatrix}$$</p>
-<h2 id="4-HLS实现"><a href="#4-HLS实现" class="headerlink" title="4.HLS实现"></a>4.HLS实现</h2>
+<h2 id="4-HLS实现"><a href="#4-HLS实现" class="headerlink" title="4.HLS实现"></a>4.HLS实现</h2><p>根据Xilinx提供的<a href="https://v.qq.com/x/page/u0516mz22q4.html" target="_blank" rel="noopener">教学课程</a>，建立相应的工程，添加HLS程序和测试数据。相关例程已上传到<a href="https://github.com/wavezhu/CORDIC_HLS" target="_blank" rel="noopener">GitHub仓库</a>。<br>实验程序存放在hls_code目录中。使用ViVado HLS运行run_hls.tcl脚本，就能建立工程进行仿真。工程中使用的测试数据存放在script目录中，使用Python语言编写。<br>顶层函数为cir_cordic，输入参数为目标角度(full_alpha)，输出参数为正弦值(sin_out)和余弦值(cos_out)。函数首先进行目标角度区间转换，将角度转换至$\left (-\pi,\pi  \right ) $区间。然后进行移位迭代计算正余弦值。最后将得到结果值转换至原始曲间，得到最终结果。</p>
+<p><img src="http://polq2xceb.bkt.clouddn.com/Cordic算法/20190324070404911.png" alt></p>
+
       
 
       
@@ -537,19 +539,19 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数值计算</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">HLS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数值计算</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">HLS</a>
               </li>
             
             <div class="clearfix"></div>
